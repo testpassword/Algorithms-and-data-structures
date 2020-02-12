@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int n, input, sequence = 0, answer = 0;
     cin >> n;
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; i++) {
         cin >> input;
         sequence += input;
         if (sequence < 0) sequence = 0;
