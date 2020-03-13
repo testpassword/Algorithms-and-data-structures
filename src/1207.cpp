@@ -16,7 +16,7 @@ void swap(Point* a, Point* b) {
 	*b = t;
 }
 
-void quickSort(Point array[], int left, int right) {
+void quickSort(Point* array, int left, int right) {
     int i = left, j = right;
     double pivot = array[(left + right) / 2].angle;
     while(i <= j) {

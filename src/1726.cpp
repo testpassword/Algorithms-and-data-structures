@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void quickSort(int array[], int left, int right) {
+void quickSort(int* array, int left, int right) {
     int i = left, j = right;
     int pivot = array[(left + right) / 2];
     while(i <= j) {

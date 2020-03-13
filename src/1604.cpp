@@ -6,7 +6,7 @@ struct SignBox {
 	int index;
 };
 
-pair<int, int> findCurrentPair(SignBox array[], int k) {
+pair<int, int> findCurrentPair(SignBox* array, int k) {
 	static pair<int, int> currentPair = make_pair(0, 0);
 	int minAmount = INT_MAX, maxAmount = INT_MIN;
 	for(int i = 0; i < k; i++) {

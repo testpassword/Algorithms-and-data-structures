@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int search(int array[], int size, int i = 0, int sum1 = 0, int sum2 = 0) {
+int search(int* array, int size, int i = 0, int sum1 = 0, int sum2 = 0) {
     static int min_ = 100000;
     if (i == size) min_ = min(min_, abs(sum1 - sum2));
     else {
