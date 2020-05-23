@@ -34,6 +34,11 @@ class FlavicksTree {
             if (soldiers[2 * v].first >= n) modify(2 * v, tl, tm, n);
             else modify(2 * v + 1, tm + 1, tr, n - soldiers[2 * v].first);
         }
+
+        void printTr() {
+            for (int i = 0; i < 20; i++) cout << "{" << soldiers[i].first << " " << soldiers[i].second << "}";
+            cout << "\n";
+        }
 };
 
 int main() {
@@ -43,8 +48,9 @@ int main() {
     tree->createNode(1, 1, n);
     int current = k;
     for (int i = 0; i < n; i++) {
+        tree->printTr();
         int dead = tree->modify(1, 1, n, current);
-        cout << dead << " ";
+        //cout << dead << " ";
         if (i == n - 1) break;
         current = (current - 1 + k) % (n - 1 - i);
         if (current == 0) current += n - 1 - i;
